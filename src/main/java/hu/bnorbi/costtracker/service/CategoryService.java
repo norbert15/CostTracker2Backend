@@ -45,7 +45,7 @@ public class CategoryService {
      */
     private List<Category> findAllDefault() {
         LOGGER.info("Find all default categories - " + DateUtil.getOffsetDateTimeNowInUTC());
-        List<Category> categoryList = categoryRepository.findAllByUserId(1L);
+        List<Category> categoryList = categoryRepository.findAllByUserId(0L);
         LOGGER.info("Categories was found - " + DateUtil.getOffsetDateTimeNowInUTC());
         return categoryList;
     }
